@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>HU</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -8,15 +9,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
   <%= render 'home/navbar' %>
 
-  <div class="container">
-    <%= yield %>
-  </div>
+    <div class="container">
+      <%= yield %>
+    </div>
 
-   <%= render 'home/new_question_form' %>
+    <%= render 'home/new_question_form' %>
 
 </body>
+
 </html>
