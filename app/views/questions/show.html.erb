@@ -22,25 +22,25 @@
 
       <%= render 'home/new_answer_form' %>
 
-        <% @answers.each do |answer| %>
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-              <img class="media-object" src="<%= answer.gravatar %>">
-            </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><%= answer.email %> answered:</h4>
-              <div>
-                <%= time_ago_in_words answer.created_at %> ago</div>
-              <%= answer.body %>
-            </div>
+      <% @answers.each do |answer| %>
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+            <img class="media-object" src="<%= answer.gravatar %>">
+          </a>
           </div>
-          <% end %>
+          <div class="media-body">
+            <h4 class="media-heading"><%= answer.email %> answered:</h4>
+            <div>
+              <%= time_ago_in_words answer.created_at %> ago</div>
+            <%= answer.body %>
+          </div>
+        </div>
+      <% end %>
 
-          <% if @answers.empty? %>
-            <div class="alert alert-info">There are no answers here, be the first to answer?</div>
-          <% end %>
+      <% if @answers.empty? %>
+        <div class="alert alert-info">There are no answers here, be the first to answer?</div>
+      <% end %>
 
     </div>
   </div>
